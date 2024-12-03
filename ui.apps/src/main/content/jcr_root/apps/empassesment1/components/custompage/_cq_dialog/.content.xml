@@ -179,7 +179,7 @@
                                         emptyText="Araticle date"
                                         fieldLabel="Araticle date"
                                         name="./date"
-                                        required="{Boolean}true"/>
+                                        />
                                     <catogory
                                         granite:class="cmp-teaser__editor-actionField-linkText"
                                         jcr:primaryType="nt:unstructured"
@@ -187,14 +187,14 @@
                                         emptyText="Araticle tag"
                                         fieldLabel="Araticle tag"
                                         name="./tag"
-                                        required="{Boolean}true"/>
+                                        />
                                     <text
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                         emptyText="text"
                                         fieldLabel="text"
                                         name="./text"
-                                        required="{Boolean}true"/>
+                                        />
                                 </items>
                             </column>
                         </items>
