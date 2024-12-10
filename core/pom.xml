@@ -165,6 +165,13 @@ Import-Package: javax.annotation;version=0.0.0,*
             <artifactId>org.apache.sling.models.api</artifactId>
         </dependency>
 
+        <dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+     <!-- Use the latest version -->
+    <scope>provided</scope>
+</dependency>
+
 
         <!-- Testing -->
         <dependency>
@@ -209,5 +216,6 @@ Import-Package: javax.annotation;version=0.0.0,*
             <version>1.4.4</version>
             <scope>test</scope>
         </dependency>
+        
     </dependencies>
 </project>
