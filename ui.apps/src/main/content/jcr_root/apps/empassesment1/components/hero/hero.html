@@ -1,8 +1,8 @@
 
-<sly data-sly-use.model="com.empassesment1.core.models.HeroModel" />
 
 
 
+<!-- 
 <img  src="${model.fileReference}" alt="no image" />
 </br>
 ${model.title}
@@ -12,4 +12,24 @@ ${model.description}
 ${model.lable}
 </br>
 ${model.url}
-</br>
+</br> -->
+
+
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientLib.css @ categories='empassesment1.site'}" />
+  </sly>
+
+  <sly data-sly-use.model="com.empassesment1.core.models.HeroModel" />
+
+  <div class="hero-component">
+    <div class="hero-image-container">
+        <img class="hero-image" src="${model.fileReference}" alt="Image Description" />
+    </div>
+    <div class="hero-content">
+        <h1 class="hero-title">${model.title}</h1>
+        <p class="hero-description">${model.description @ context='html'}</p>
+        <span class="hero-label">${model.lable}</span>
+        <a class="hero-link" href="${model.url}" target="_blank">${model.lable}</a>
+    </div>
+  </div>
