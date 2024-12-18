@@ -14,8 +14,7 @@ public class PageCreationsServiceImpl  implements PageCreationService {
 
      @Override
      public Page createPage(ResourceResolver resourceResolver, String pageName, String title) {
-        // Set the details you provided here
-        String parentPath = "/content/empassesment1/lan/en-us";
+        String parentPath = "/content/empassesment1/lan/en_ie";
         String templatePath = "/conf/empassesment1/settings/wcm/templates/article3";
 
         Page page = null;
