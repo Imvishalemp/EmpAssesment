@@ -13,15 +13,7 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
-<!DOCTYPE HTML>
-<html data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page" lang="${page.language}"
-      data-sly-use.head="head.html"
-      data-sly-use.footer="footer.html">
-    <head data-sly-call="${head.head @ page = page}"></head>
-    <body>
-        <sly data-sly-include="body.socialmedia_begin.html"></sly>
-        <sly data-sly-include="body.html"></sly>
-        <sly data-sly-call="${footer.footer @ page = page}"></sly>
-        <sly data-sly-include="body.socialmedia_end.html"></sly>
-    </body>
-</html>
+<div id="fb-root" data-sly-use.socialMedia="com.adobe.cq.wcm.core.components.models.SocialMediaHelper"
+     data-sly-test.facebookSharing="${socialMedia.hasFacebookSharing}"
+     data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"></div>
+<sly data-sly-call="${clientlib.js @ categories='core.wcm.components.page.v1.sharing'}" data-sly-test="${facebookSharing}"></sly>

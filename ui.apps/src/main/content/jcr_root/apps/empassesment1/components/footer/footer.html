@@ -1,0 +1,32 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientLib.css @ categories='empassesment1.site'}" />
+
+<sly data-sly-use.model="com.empassesment1.core.models.FooterModel" />
+
+<div class="footer-container">
+    <!-- Left Block -->
+    <div class="footer-left-block">
+        <div class="logo-section">
+            <img src="${model.fileReference}" alt="Vonage Logo" class="logo-image" />
+        </div>
+        <div class="footer-description-block">
+            <p class="footer-description">
+                ${model.richtext @ context='html'}
+            </p>
+        </div>
+    </div>
+
+    <!-- Right Block -->
+    <div class="footer-right-block">
+        <h2>${model.sectionheader @ context='html'}</h2>
+        <ul class="quick-links">
+            <sly data-sly-list.item="${model.actions}">
+                <li>
+                    <a href="${item.pathLink}">${item.label}</a>
+                </li>
+            </sly>
+        </ul>
+    </div>
+</div>
+
+<button class="footerButton">Click Me!</button>
